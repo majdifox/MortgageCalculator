@@ -32,7 +32,7 @@ body {
 .mortgagecalc__card {
   background-color: var(--White);
   border-radius: 10px;
-  height: 70%;
+  height: 100%;
   width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -351,22 +351,36 @@ input[type="number"] {
   display: flex;
   align-self: center;
   border-top: 1px solid var(--Slate-100);
+  width: 100%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
+  .mortgagecalc__card {
+    width: 80%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 576px) {
   .mortgagecalc__card {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
     width: 90%;
-    height: 100%;
+    height: auto;
+    min-height: 90%;
+    overflow-y: auto;
   }
+  
   .mortgagecalc__card-right {
-    border-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 
   .mortgagecalc__calculate-button {
     width: 100%;
     font-size: 15px;
+  }
+  
+  .mortgagecalc__active-cardcontainer {
+    padding: 30px;
   }
 }
